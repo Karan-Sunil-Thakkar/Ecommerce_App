@@ -14,24 +14,29 @@ const Wishlist = () => {
     <View style={{ flex: 1 }}>
       {/*  We are the List of of ITEM of cart here ..... */}
 
-      <FlatList
-        data={cartData}
-        renderItem={({ item, index }) => {
-          return (
-            <CartItemData
-              iswhisList={'swe'}
-              item={item}
-              onRemoveFromWhisList={() => {
-                dispatch(removeFromWishList(index))
-              }}
-              onAddToCart={(x) => {
-                dispatch(addItemToCart(x));
-              }}
-
-            />
-          );
-        }}
-      />
+      {cartData.length > 0 ? (
+        <FlatList
+          data={cartData}
+          renderItem={({ item, index }) => {
+            return (
+              <CartItemData
+                iswhisList={'swe'}
+                item={item}
+                onRemoveFromWhisList={() => {
+                  dispatch(removeFromWishList(index));
+                }}
+                onAddToCart={x => {
+                  dispatch(addItemToCart(x));
+                }}
+              />
+            );
+          }}
+        />
+      ) : (
+        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+          <Text>No Data Found in WhisList </Text>
+        </View>
+      )}
     </View>
   );
 };
