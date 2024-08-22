@@ -31,3 +31,9 @@
 // we are going to add the item in cart with the help of redux ..
 // npm install react-redux (Command ......)
 // npm install redux (Command .......)
+
+
+
+
+// Part 7 (Payment Gateway)
+// npm install react-native-razorpay --save (Command)

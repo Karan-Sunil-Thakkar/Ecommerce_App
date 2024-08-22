@@ -9,6 +9,10 @@ import Signup from './screens/Signup';
 import Home from './screens/Home';
 import MyAddress from './screens/MyAddress';
 import AddAddress from './screens/AddAddress';
+import Checkout from './screens/Checkout';
+import MyComponent from './screens/MyComponent';
+import OrderSuccess from './screens/OrderSuccess';
+import Orders from './screens/Orders';
 
 const Stack = createNativeStackNavigator();
 
@@ -16,6 +20,8 @@ const Appnavigator = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator>
+
+
         <Stack.Screen
           name="Splash"
           component={Splash}
@@ -44,6 +50,21 @@ const Appnavigator = () => {
         <Stack.Screen
           name="AddAddress"
           component={AddAddress}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Checkout"
+          component={Checkout}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="OrderSuccess"
+          component={OrderSuccess}
+          options={{ headerShown: false }}
+        />
+        <Stack.Screen
+          name="Orders"
+          component={Orders}
           options={{ headerShown: false }}
         />
       </Stack.Navigator>

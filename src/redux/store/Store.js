@@ -20,6 +20,7 @@ import { persistReducer } from 'redux-persist';
 import Reducers from '../reducers/Reducers';
 import Reducers2 from '../reducers/Reducers2';
 import AddressReducers from '../reducers/AddressReducers';
+import OrderReducers from '../reducers/OrderReducers';
 
 let presistConfig = {
     key: 'root',
@@ -28,7 +29,7 @@ let presistConfig = {
 // let rootReducer = combineReducers({
 //     auth:AuthSlice
 // })
-let rootReducer = combineReducers({ Reducers, Reducers2, AddressReducers });
+let rootReducer = combineReducers({ Reducers, Reducers2, AddressReducers, OrderReducers });
 
 let presistedReducer = persistReducer(presistConfig, rootReducer);
 

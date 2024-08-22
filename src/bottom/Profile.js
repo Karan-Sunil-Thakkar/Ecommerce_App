@@ -64,6 +64,7 @@ const Profile = () => {
         }}>
         <Text style={{}}> My Address</Text>
       </TouchableOpacity>
+
       <TouchableOpacity
         style={{
           width: '90%',
@@ -72,9 +73,12 @@ const Profile = () => {
           borderBottomWidth: 0.3,
           marginTop: 20,
           borderBottomColor: '#8e8e8e',
+        }} onPress={() => {
+          navigation.navigate('Orders')
         }}>
         <Text style={{}}> My Orders</Text>
       </TouchableOpacity>
+
       <TouchableOpacity
         style={{
           width: '90%',
